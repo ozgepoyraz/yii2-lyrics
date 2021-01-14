@@ -1,0 +1,36 @@
+{
+  "name": "ozgepoyraz/yii2-lyrics",
+  "description": "Lyrics Module",
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "ozgepoyraz",
+      "email": "180202025@kocaeli.edu.tr",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "yiisoft/yii2": "~2.0.13"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "8.*.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "ozgepoyraz\\lyrics\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ozgepoyraz\\lyrics\\tests\\": "tests"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
+}
