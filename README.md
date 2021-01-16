@@ -13,7 +13,7 @@ Daha sonrasında advanced yii projesi için backend\config\main.php dosyasında 
 ```
 'modules' => [
   'lyrics' => [
-            'class' => 'ozgepoyraz\lyrics\Module',
+      'class' => 'ozgepoyraz\lyrics\Module',
   ],
 ],
  ```
@@ -38,11 +38,9 @@ Modül anasayfasına girdiğinizde karşınıza aşağıdaki gibi bir sayfa gele
 
 Müzisyenler sayfasında "Create Musician" ile form üzerinde isim, yaş ve milliyet girerek yeni müzisyen ekleyebilirsiniz. Ayrıca eklenen her veri için sistem saatinden otomatik olarak oluşturulma zamanı değeri de doldurulur. Örnek Müzisyenler tablosu ve oluşturma sayfası;
 
-![](images/createmusicians.jpg)
-
 ![](images/musicians.jpg)
 
-Daha sonrasında "domaininiz/backend/web/index.php?r=lyrics" route'u ile modül anasayfasına dönerek "Manage Lyrics" butonu ile Şarkı Sözleri tablosu üzerinde işlemlerinizi gerçekleştirebilirsiniz ya da direkt olarak bu sayfaya "domaininiz/backend/web/index.php?r=lyrics/lyrics" route'u ile ulaşabilirsiniz. Burada "Create Lyrics" ile yeni bir şarkı sözü oluşturmak istediğinizde;
+Daha sonrasında "domaininiz/backend/web/index.php?r=lyrics" route'u ile modül anasayfasına dönerek veya menüye dön butonunu kullandıktan sonra "Manage Lyrics" butonu ile Şarkı Sözleri tablosu üzerinde işlemlerinizi gerçekleştirebilirsiniz ya da direkt olarak bu sayfaya "domaininiz/backend/web/index.php?r=lyrics/lyrics" route'u ile ulaşabilirsiniz. Burada "Create Lyrics" ile yeni bir şarkı sözü oluşturmak istediğinizde;
 
 ![](images/createlyrics.jpg)
 
@@ -60,15 +58,26 @@ Anasayfada Apis kısmında Random Lyrics ya da Random Musicians seçenekleriyle 
 json formatında rastgele bir şarkıyı dönmektedir. Aynı şekilde rastgele bir müzisyende döndürebilirsiniz. Eğer tablolar boş ise boş liste dönecektir.
 
 ## Modülde Yaptıklarımdan Bazıları
+
 -Migration ile foreign keyle bağlanmış 2 adet ilişkili tablo oluşturdum.
+
 -Bu Tablolar üzerindeki ilişkileri kullanarak modelleri generate ettim.
+
 -Modelleri kullanarak CRUD generate ettim.
+
 -Tablolardaki id ilişkisini kaldırarak helperları kullanarak formlarda isim özelliğiyle değiştirdim.
+
 -Gridview widget'ını düzenleyerek id attribute'unun value'sunu isim özellikleriyle değiştirdim.
+
 -Bu şekilde eklenen elemanlar arayüz üzerinden elle id girmeden dropdown ile seçilerek ilişkilendirilebilir hale geldi.
+
 -Search Modeli düzenleyerek id aramasını kaldırıp join query ile ilişkili özelliğe göre arama ekledim.
+
 -Random şarkı sözü ve şarkıcı için controller oluşturdum ve rastgele bir elemanı response döndüm.
+
 -Yii helperlarını kullanarak bir ana sayfa oluşturdum.
+
+-Rapora eklemeyi unuttuğum şeyler olabilir. Genel olarak Mastering Yii Kitabında işlediğimiz chapterlarda gördüğüm her şeyin bir uygulamasını yapmaya çalıştım. Ek olarak yiinin rest api sistemini kullanmak istedim fakat url management kısmında problem yaşadığım için basit bir http api yaptım.
 
 
 
