@@ -2,7 +2,7 @@
 
 # Nasıl Kurulur?
 
-Modülü mevcut yii projenize packegist üstünden aşağıdaki composer komutu ile kurabilirsiniz.
+Modülü mevcut yii projenize packagist üstünden aşağıdaki composer komutu ile kurabilirsiniz.
 
 ```
 composer require --prefer-dist ozgepoyraz/yii2-lyrics "dev-master"
@@ -44,11 +44,11 @@ Daha sonrasında "domaininiz/backend/web/index.php?r=lyrics" route'u ile modül 
 
 ![](images/createlyrics.jpg)
 
-İlgili şarkı sözünü daha önce oluşturduğunuz bir sanatçı ile ilişkilendirmeniz gerekmektedir. Eğer herhangi bir sanatçı ile ilişkilendirmek istemiyorsanız. Anonim adı ile bir müzisyen oluşturup, kimliği belirsiz şarkı sözlerini ilişkiledirmeniz gerekmektedir. Daha sonrasında şarkı sözü için başlık, içerik ve tür kısımlarını doldurarak şarkı sözleri oluşturabilirsiniz.Aşağıda örnek olarak oluşturulmuş ve müzisyenlerle ilişkilendirilmiş şarkı sözleri bulunmaktadır.
+İlgili şarkı sözünü daha önce oluşturduğunuz bir sanatçı ile ilişkilendirmeniz gerekmektedir. Eğer herhangi bir sanatçı ile ilişkilendirmek istemiyorsanız. Anonim adı ile bir müzisyen oluşturup, kimliği belirsiz şarkı sözlerini ilişkilendirmeniz gerekmektedir. Daha sonrasında şarkı sözü için başlık, içerik ve tür kısımlarını doldurarak şarkı sözleri oluşturabilirsiniz.Aşağıda örnek olarak oluşturulmuş ve müzisyenlerle ilişkilendirilmiş şarkı sözleri bulunmaktadır.
 
 ![](images/lyrics.jpg)
 
-Tablolar ilişkili olduğu için bir müzisyeni sildiğinizde onunla ilişkilendirilmiş şarkı sözleri de silinecektir.
+Tablolar ilişkili olduğu için bir müzisyeni sildiğinizde onunla ilişkilendirilmiş şarkı sözleri de silinecektir. Ayrıca tabloları ilişkilendiren müzisyen adı satırını kullanarak şarkı sözlerini filtreleyebilirsiniz. Normalde o sütun idye aittir fakat search model üzerinden düzenlenerek isme göre arama işlevi kazandırılmıştır.
 
 Anasayfada Apis kısmında Random Lyrics ya da Random Musicians seçenekleriyle http response olarak rastgele bir şarkı veya sanatçı bilgisi dönmektedir.
 /lyrics/random/lyrics ya da /lyrics/random/musicians urllerine get isteği yaparak rastgele bir şarkıyı tarayıcıda görüntülersek;
