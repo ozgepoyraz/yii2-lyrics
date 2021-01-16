@@ -55,7 +55,7 @@ Anasayfada Apis kısmında Random Lyrics ya da Random Musicians seçenekleriyle 
 
 ![](images/randomlyrics.jpg)
 
-json formatında rastgele bir şarkıyı dönmektedir. Aynı şekilde rastgele bir müzisyende döndürebilirsiniz. Eğer tablolar boş ise boş liste dönecektir.
+json formatında rastgele bir şarkıyı dönmektedir. Aynı şekilde rastgele bir müzisyende döndürebilirsiniz. Eğer tablolar boş ise json olarak hata kodu dönecektir.
 
 ## Modülde Yaptıklarımdan Bazıları
 
