@@ -77,7 +77,7 @@ json formatında rastgele bir şarkıyı dönmektedir. Aynı şekilde rastgele b
 
 -Yii helperlarını kullanarak bir ana sayfa oluşturdum.
 
--Rapora eklemeyi unuttuğum şeyler olabilir. Genel olarak Mastering Yii Kitabında işlediğimiz chapterlarda gördüğüm her şeyin bir uygulamasını yapmaya çalıştım. Ek olarak yiinin rest api sistemini kullanmak istedim fakat url management kısmında problem yaşadığım için basit bir http api yaptım.
+-Derslerde gördüğümüz her şeyi kullanmaya çalıştım. Raporda hepsine değinememiş olabilirim. Ek olarak yiinin rest api sistemini kullanmak istedim fakat url management kısmında problem yaşadığım için basit bir http api yaptım.
 
 
 
