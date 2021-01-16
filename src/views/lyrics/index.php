@@ -36,6 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Create Lyrics', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Return Menu', ['/lyrics'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

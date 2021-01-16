@@ -1,5 +1,4 @@
 # Yii2 Şarkı Sözü Modülü
-yii2-lyrics
 
 # Nasıl Kurulur?
 
@@ -13,24 +12,21 @@ Daha sonrasında advanced yii projesi için backend\config\main.php dosyasında 
 
 ```
 'modules' => [
-       ...
-     'lyrics' => [
+  'lyrics' => [
             'class' => 'ozgepoyraz\lyrics\Module',
-        ],
-
-   ],
+  ],
+],
  ```
 
 Daha sonrasında migration işlemi gerçekleştirerek modül için gerekli tabloları oluşturmanız gerekiyor. Bunun için yii üzerinden bir konsol komutu girmelisiniz aşağıdaki komutu girerek migration işlemini gerçekleştirebilirsiniz.(Komutu proje dizininde giriniz.)
 
 ```
-  php yii migrate/up --migrationPath=@vendor/ozgepoyraz/yii2-lyrics/src/migrations
+php yii migrate/up --migrationPath=@vendor/ozgepoyraz/yii2-lyrics/src/migrations
  ```
 
 Artık modül başarıyla kurulmuştur.
 
 "domaininiz/backend/web/index.php?r=lyrics" adresinden modül sayfasına ulaşabilirsiniz.
-
 
 # Modül Hakkında
 
@@ -40,7 +36,9 @@ Modül anasayfasına girdiğinizde karşınıza aşağıdaki gibi bir sayfa gele
 
 "Manage Musicians" Butonu ile Müzisyenler tablosu üzerinde işlemlerinizi gerçekleştirebilirsiniz.
 
-Müzisyenler sayfasında "Create Musician" ile form üzerinde isim, yaş ve milliyet girerek yeni müzisyen ekleyebilirsiniz. Ayrıca eklenen her veri için sistem saatinden otomatik olarak oluşturulma zamanı değeri de doldurulur. Örnek Müzisyenler tablosu;
+Müzisyenler sayfasında "Create Musician" ile form üzerinde isim, yaş ve milliyet girerek yeni müzisyen ekleyebilirsiniz. Ayrıca eklenen her veri için sistem saatinden otomatik olarak oluşturulma zamanı değeri de doldurulur. Örnek Müzisyenler tablosu ve oluşturma sayfası;
+
+![](images/createmusicians.jpg)
 
 ![](images/musicians.jpg)
 
@@ -51,6 +49,27 @@ Daha sonrasında "domaininiz/backend/web/index.php?r=lyrics" route'u ile modül 
 İlgili şarkı sözünü daha önce oluşturduğunuz bir sanatçı ile ilişkilendirmeniz gerekmektedir. Eğer herhangi bir sanatçı ile ilişkilendirmek istemiyorsanız. Anonim adı ile bir müzisyen oluşturup, kimliği belirsiz şarkı sözlerini ilişkiledirmeniz gerekmektedir. Daha sonrasında şarkı sözü için başlık, içerik ve tür kısımlarını doldurarak şarkı sözleri oluşturabilirsiniz.Aşağıda örnek olarak oluşturulmuş ve müzisyenlerle ilişkilendirilmiş şarkı sözleri bulunmaktadır.
 
 ![](images/lyrics.jpg)
+
+Tablolar ilişkili olduğu için bir müzisyeni sildiğinizde onunla ilişkilendirilmiş şarkı sözleri de silinecektir.
+
+Anasayfada Apis kısmında Random Lyrics ya da Random Musicians seçenekleriyle http response olarak rastgele bir şarkı veya sanatçı bilgisi dönmektedir.
+/lyrics/random/lyrics ya da /lyrics/random/musicians urllerine get isteği yaparak rastgele bir şarkıyı tarayıcıda görüntülersek;
+
+![](images/randomlyrics.jpg)
+
+json formatında rastgele bir şarkıyı dönmektedir. Aynı şekilde rastgele bir müzisyende döndürebilirsiniz. Eğer tablolar boş ise boş liste dönecektir.
+
+## Modülde Yaptıklarımdan Bazıları
+-Migration ile foreign keyle bağlanmış 2 adet ilişkili tablo oluşturdum.
+-Bu Tablolar üzerindeki ilişkileri kullanarak modelleri generate ettim.
+-Modelleri kullanarak CRUD generate ettim.
+-Tablolardaki id ilişkisini kaldırarak helperları kullanarak formlarda isim özelliğiyle değiştirdim.
+-Gridview widget'ını düzenleyerek id attribute'unun value'sunu isim özellikleriyle değiştirdim.
+-Bu şekilde eklenen elemanlar arayüz üzerinden elle id girmeden dropdown ile seçilerek ilişkilendirilebilir hale geldi.
+-Search Modeli düzenleyerek id aramasını kaldırıp join query ile ilişkili özelliğe göre arama ekledim.
+-Random şarkı sözü ve şarkıcı için controller oluşturdum ve rastgele bir elemanı response döndüm.
+-Yii helperlarını kullanarak bir ana sayfa oluşturdum.
+
 
 
 
